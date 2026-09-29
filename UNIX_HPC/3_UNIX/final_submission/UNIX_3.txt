@@ -1,4 +1,20 @@
-
+[martinezamezaga.p@explorer-02 3_UNIX]$ sr/bin/c*
+ls /usr/bin/*a*
+ls /usr/bin/*o
+ls /usr/bin/*[ac]*
+/usr/bin/c++                 /usr/bin/chmod                         /usr/bin/cluster
+/usr/bin/c89                 /usr/bin/choom                         /usr/bin/cmp
+/usr/bin/c99                 /usr/bin/chown                         /usr/bin/cmsutil
+/usr/bin/gvmap                         /usr/bin/tpm2_certifycreation
+/usr/bin/gvmap.sh                      /usr/bin/tpm2_certifyX509certutil
+/usr/bin/gvpack                        /usr/bin/tpm2_changeauth
+/usr/bin/hardlink                      /usr/bin/tpm2_changeeps
+/usr/bin/nf-ct-list                    /usr/bin/zforce
+/usr/bin/nf-exp-add                    /usr/bin/zipcloak
+/usr/bin/nice                          /usr/bin/zipdetails
+/usr/bin/nisdomainname                 /usr/bin/zstdcat
+# Cut for simplicity
+[martinezamezaga.p@explorer-02 3_UNIX]$ # that was Exercise 1
 [martinezamezaga.p@explorer-02 3_UNIX]$ pwd
 /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/3_UNIX
 [martinezamezaga.p@explorer-02 3_UNIX]$ cd ~
