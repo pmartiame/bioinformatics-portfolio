@@ -1,0 +1,3 @@
+# some useful command line short-cuts
+alias ls='ls -p'
+alias rm='rm -i'

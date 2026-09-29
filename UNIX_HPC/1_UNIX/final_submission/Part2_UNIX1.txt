@@ -1,0 +1,98 @@
+Microsoft Windows [Version 10.0.26200.9168]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\mupc>ssh martinezamezaga.p@login.explorer.northeastern.edu
+martinezamezaga.p@login.explorer.northeastern.edu's password:
+Last login: Mon Sep 28 22:06:36 2026 from 10.110.243.173
+    _______  __ ____  __    ____  ____  __________
+   / ____/ |/ // __ \/ /   / __ \/ __ \/ ____/ __ \
+  / __/  |   // /_/ / /   / / / / /_/ / __/ / /_/ /
+ / /___ /   |/ ____/ /___/ /_/ / _, _/ /___/ _, _/
+/_____//_/|_/_/   /_____/\____/_/ |_/_____/_/ |_|
+
++-----------------------------------------------------------+
+| You're now connected to the Explorer cluster. Visit our   |
+| website http://rc.northeastern.edu/support for links to   |
+| our service catalog, documentation, training, and consul- |
+| tations. You can also email us at rchelp@northeastern.edu |
+| to generate a help ticket.                                |
+|                                                           |
+| The Research Computing Team                               |
++-----------------------------------------------------------+
+
+The Research Computing team is thrilled to share that a new, state-of-the-art HPC cluster is coming soon to the Northeastern research computing community. All Northeastern faculty and PIs are eligible to submit a proposal, especially thosewho already use GPUs on the Explorer and Discovery HPC clusters.
+If you are a student or researcher who is a current Explorer HPC cluster user, we highly encourage you to reach out to your account sponsor (faculty or PI) to make a submission.
+
+The application process is here: https://forms.gle/eTPsdQZN25efoJ3g6
+If you have questions or feedback, please email d.tiwari@northeastern.edu.
+
+[martinezamezaga.p@explorer-02 ~]$ # starting part 2
+[martinezamezaga.p@explorer-02 ~]$ ls
+github  ondemand
+#task 18
+[martinezamezaga.p@explorer-02 ~]$  source /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX/profile
+[martinezamezaga.p@explorer-02 ~]$ ls
+github/  ondemand/
+[martinezamezaga.p@explorer-02 ~]$ # it does look different the colors changed on my screen
+[martinezamezaga.p@explorer-02 ~]$ cd  source /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX/profile
+-bash: cd: too many arguments
+[martinezamezaga.p@explorer-02 ~]$ cd source /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfoli
+o/UNIX_HPC/1_UNIX/profile
+-bash: cd: too many arguments
+[martinezamezaga.p@explorer-02 ~]$ cd /courses/BIOL
+BIOL2406.202710/ BIOL6216.202710/
+[martinezamezaga.p@explorer-02 ~]$ cd /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX/
+[martinezamezaga.p@explorer-02 1_UNIX]$ mkdir Code
+[martinezamezaga.p@explorer-02 1_UNIX]$ cd Code/
+[martinezamezaga.p@explorer-02 Code]$ #my first unix shell script
+[martinezamezaga.p@explorer-02 Code]$ # made new dir
+[martinezamezaga.p@explorer-02 Code]$ echo "Hello World"
+Hello World
+[martinezamezaga.p@explorer-02 Code]$ # wait i messed up
+[martinezamezaga.p@explorer-02 Code]$ nano hello.sh
+[martinezamezaga.p@explorer-02 Code]$ cat hello.sh
+# my first Unix shell script
+echo "Hello World"
+#task 19 complete
+[martinezamezaga.p@explorer-02 Code]$ bash hello.sh
+Hello World
+[martinezamezaga.p@explorer-02 Code]$ ls -l
+total 1
+-rw-r--r-- 1 martinezamezaga.p BIOL2406.202710-staff 49 Sep 28 22:45 hello.sh
+[martinezamezaga.p@explorer-02 Code]$ chmod u+x hello.sh
+
+[martinezamezaga.p@explorer-02 Code]$ bash hello.sh
+Hello World
+[martinezamezaga.p@explorer-02 Code]$ # did what task 20 asked of me
+[martinezamezaga.p@explorer-02 Code]$ # it printed hello world
+[martinezamezaga.p@explorer-02 Code]$ ./hello.sh
+Hello World
+[martinezamezaga.p@explorer-02 Code]$ # it ran it
+[martinezamezaga.p@explorer-02 Code]$ cd ..
+[martinezamezaga.p@explorer-02 1_UNIX]$ # i am going to create fake folders and files for task 21
+[martinezamezaga.p@explorer-02 1_UNIX]$ # did task 21 above
+[martinezamezaga.p@explorer-02 1_UNIX]$ mkdir Text Pictures Music
+[martinezamezaga.p@explorer-02 1_UNIX]$ touch notes.txt homework.txt photo.jpg vacation.jpg song.mp3 music.mp3
+[martinezamezaga.p@explorer-02 1_UNIX]$ ls
+At_genes.gff  data/         Music/     notes.txt  Pictures/  song.mp3  Text/
+Code/         homework.txt  music.mp3  photo.jpg  profile    Temp1/    vacation.jpg
+[martinezamezaga.p@explorer-02 1_UNIX]$ nano cleanup.sh
+[martinezamezaga.p@explorer-02 1_UNIX]$ ls
+At_genes.gff  Code/  homework.txt  music.mp3  photo.jpg  profile   Temp1/  vacation.jpg
+cleanup.sh    data/  Music/        notes.txt  Pictures/  song.mp3  Text/
+[martinezamezaga.p@explorer-02 1_UNIX]$ chmod +x cleanup.sh
+[martinezamezaga.p@explorer-02 1_UNIX]$ ./cleanup.sh
+[martinezamezaga.p@explorer-02 1_UNIX]$ ;s
+-bash: syntax error near unexpected token `;'
+[martinezamezaga.p@explorer-02 1_UNIX]$ ls
+At_genes.gff  cleanup.sh  Code/  data/  Music/  Pictures/  profile  Temp1/  Text/
+[martinezamezaga.p@explorer-02 1_UNIX]$ ls Text/
+homework.txt  notes.txt
+[martinezamezaga.p@explorer-02 1_UNIX]$ ls Pictures/
+photo.jpg  vacation.jpg
+[martinezamezaga.p@explorer-02 1_UNIX]$ ls Music/
+music.mp3  song.mp3
+[martinezamezaga.p@explorer-02 1_UNIX]$ # task 22 and 23 completed
+[martinezamezaga.p@explorer-02 1_UNIX]$ # had the expected result
+[martinezamezaga.p@explorer-02 1_UNIX]$ # I did this in my HPC environment because my powershell and personal cmd were nnot running the linux commands
+[martinezamezaga.p@explorer-02 1_UNIX]$

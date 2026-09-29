@@ -1,0 +1,318 @@
+Microsoft Windows [Version 10.0.26200.9168]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\mupc>ssh martinezamezaga.p@login.explorer.northeastern.edu
+martinezamezaga.p@login.explorer.northeastern.edu's password:
+Last login: Mon Sep 28 22:04:37 2026 from 10.110.243.173
+    _______  __ ____  __    ____  ____  __________
+   / ____/ |/ // __ \/ /   / __ \/ __ \/ ____/ __ \
+  / __/  |   // /_/ / /   / / / / /_/ / __/ / /_/ /
+ / /___ /   |/ ____/ /___/ /_/ / _, _/ /___/ _, _/
+/_____//_/|_/_/   /_____/\____/_/ |_/_____/_/ |_|
+
++-----------------------------------------------------------+
+| You're now connected to the Explorer cluster. Visit our   |
+| website http://rc.northeastern.edu/support for links to   |
+| our service catalog, documentation, training, and consul- |
+| tations. You can also email us at rchelp@northeastern.edu |
+| to generate a help ticket.                                |
+|                                                           |
+| The Research Computing Team                               |
++-----------------------------------------------------------+
+
+The Research Computing team is thrilled to share that a new, state-of-the-art HPC cluster is coming soon to the Northeastern research computing community. All Northeastern faculty and PIs are eligible to submit a proposal, especially thosewho already use GPUs on the Explorer and Discovery HPC clusters.
+If you are a student or researcher who is a current Explorer HPC cluster user, we highly encourage you to reach out to your account sponsor (faculty or PI) to make a submission.
+
+The application process is here: https://forms.gle/eTPsdQZN25efoJ3g6
+If you have questions or feedback, please email d.tiwari@northeastern.edu.
+
+[martinezamezaga.p@explorer-02 ~]$ ls
+github  ondemand
+[martinezamezaga.p@explorer-02 ~]$ cd /courses/
+[martinezamezaga.p@explorer-02 courses]$ cd BIO
+BIOL2406.202710/ BIOL6216.202710/ BIOT7001.202710/
+[martinezamezaga.p@explorer-02 courses]$ cd BIOL2406.202710/
+[martinezamezaga.p@explorer-02 BIOL2406.202710]$ cd students/
+[martinezamezaga.p@explorer-02 students]$ cd martinezamezaga.p/
+[martinezamezaga.p@explorer-02 martinezamezaga.p]$ cd bioinformatics-portfolio/
+[martinezamezaga.p@explorer-02 bioinformatics-portfolio]$ ls
+README.md  UNIX_HPC
+[martinezamezaga.p@explorer-02 bioinformatics-portfolio]$ cd /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio
+[martinezamezaga.p@explorer-02 bioinformatics-portfolio]$ cd ..
+[martinezamezaga.p@explorer-02 martinezamezaga.p]$ cd bioinformatics-portfolio
+[martinezamezaga.p@explorer-02 bioinformatics-portfolio]$ # task 1 & task 2 complete
+[martinezamezaga.p@explorer-02 bioinformatics-portfolio]$ # moved to bioinformatics portfolio using relative path and absolute path
+[martinezamezaga.p@explorer-02 bioinformatics-portfolio]$ cd /
+[martinezamezaga.p@explorer-02 /]$ cd ~
+[martinezamezaga.p@explorer-02 ~]$ cd /
+[martinezamezaga.p@explorer-02 /]$ cd
+[martinezamezaga.p@explorer-02 ~]$ # task 3 demonstrated
+[martinezamezaga.p@explorer-02 ~]$ ls -l
+total 0
+drwxr-xr-x 2 martinezamezaga.p users 4096 Sep 10 13:17 github
+drwxr-xr-x 2 martinezamezaga.p users 4096 Apr 10  2023 ondemand
+[martinezamezaga.p@explorer-02 ~]$ ls -R
+.:
+github  ondemand
+
+./github:
+bioinformatics-portfolio
+
+./github/bioinformatics-portfolio:
+README.md
+
+./ondemand:
+dev
+
+./ondemand/dev:
+ReadMe.md
+[martinezamezaga.p@explorer-02 ~]$ ls -l -t -r
+total 0
+drwxr-xr-x 2 martinezamezaga.p users 4096 Apr 10  2023 ondemand
+drwxr-xr-x 2 martinezamezaga.p users 4096 Sep 10 13:17 github
+[martinezamezaga.p@explorer-02 ~]$ ls -lh
+total 0
+drwxr-xr-x 2 martinezamezaga.p users 4.0K Sep 10 13:17 github
+drwxr-xr-x 2 martinezamezaga.p users 4.0K Apr 10  2023 ondemand
+[martinezamezaga.p@explorer-02 ~]$ # task 4 demonstrated
+[martinezamezaga.p@explorer-02 ~]$ cd /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio
+[martinezamezaga.p@explorer-02 bioinformatics-portfolio]$ cd UNIX_HPC/
+[martinezamezaga.p@explorer-02 UNIX_HPC]$ cd 1_UNIX/
+[martinezamezaga.p@explorer-02 1_UNIX]$ # moving this folder to do the work
+[martinezamezaga.p@explorer-02 1_UNIX]$ mkdir -p Temp1/Temp2
+[martinezamezaga.p@explorer-02 1_UNIX]$ # task 5 made the new directories
+[martinezamezaga.p@explorer-02 1_UNIX]$ cd Temp1/
+[martinezamezaga.p@explorer-02 Temp1]$ pwd
+/courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX/Temp1
+[martinezamezaga.p@explorer-02 Temp1]$ cd ..
+[martinezamezaga.p@explorer-02 1_UNIX]$ cd Temp2
+-bash: cd: Temp2: No such file or directory
+[martinezamezaga.p@explorer-02 1_UNIX]$ ls
+Temp1
+[martinezamezaga.p@explorer-02 1_UNIX]$ /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX/Temp1
+-bash: /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX/Temp1: Is a directory
+[martinezamezaga.p@explorer-02 1_UNIX]$ cd /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX/Temp1
+[martinezamezaga.p@explorer-02 Temp1]$ # showed moving using absolute and relative path
+[martinezamezaga.p@explorer-02 Temp1]$ # task 5 complete
+[martinezamezaga.p@explorer-02 Temp1]$ # I am utilizing my cluster account so no downloads path
+[martinezamezaga.p@explorer-02 Temp1]$ #cd ..
+[martinezamezaga.p@explorer-02 Temp1]$ cd ..
+[martinezamezaga.p@explorer-02 1_UNIX]$ rm -r Temp1/
+[martinezamezaga.p@explorer-02 1_UNIX]$ ls
+[martinezamezaga.p@explorer-02 1_UNIX]$ # showcasing utilizing rm to remove a directory
+[martinezamezaga.p@explorer-02 1_UNIX]$ # note that when you use it everything gets deleted
+[martinezamezaga.p@explorer-02 1_UNIX]$ # task 6 complete
+[martinezamezaga.p@explorer-02 1_UNIX]$ # going to use tap complete from home directory to this directory only using cdrelative paths
+[martinezamezaga.p@explorer-02 1_UNIX]$ cd ~
+[martinezamezaga.p@explorer-02 ~]$ cd /courses/
+[martinezamezaga.p@explorer-02 courses]$ cd BIOL2406.202710/
+[martinezamezaga.p@explorer-02 BIOL2406.202710]$ cd students/
+[martinezamezaga.p@explorer-02 students]$ cd martinezamezaga.p/
+[martinezamezaga.p@explorer-02 martinezamezaga.p]$ cd bioinformatics-portfolio/
+[martinezamezaga.p@explorer-02 bioinformatics-portfolio]$ cd UNIX_HPC/
+[martinezamezaga.p@explorer-02 UNIX_HPC]$ cd 1_UNIX/
+[martinezamezaga.p@explorer-02 1_UNIX]$ # took me about 20 seconds to come here using tab complete
+[martinezamezaga.p@explorer-02 1_UNIX]$ # Task 7 complete
+[martinezamezaga.p@explorer-02 1_UNIX]$ mkdir Temp1
+[martinezamezaga.p@explorer-02 1_UNIX]$ cd Temp1/
+[martinezamezaga.p@explorer-02 Temp1]$ # remade the Temp1 file for task 8
+[martinezamezaga.p@explorer-02 Temp1]$ touch fat fit feet
+[martinezamezaga.p@explorer-02 Temp1]$ ls f?t
+fat  fit
+[martinezamezaga.p@explorer-02 Temp1]$ ls f*t
+fat  feet  fit
+[martinezamezaga.p@explorer-02 Temp1]$ ls f??t
+feet
+[martinezamezaga.p@explorer-02 Temp1]$ # task 8 complete
+[martinezamezaga.p@explorer-02 Temp1]$ cd ..
+[martinezamezaga.p@explorer-02 1_UNIX]$ mkdir Temp3
+[martinezamezaga.p@explorer-02 1_UNIX]$ cd Temp3
+[martinezamezaga.p@explorer-02 Temp3]$ pwd
+/courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX/Temp3
+[martinezamezaga.p@explorer-02 Temp3]$ cd ~
+[martinezamezaga.p@explorer-02 ~]$ pwd
+/home/martinezamezaga.p
+[martinezamezaga.p@explorer-02 ~]$ mv /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX/Temp3 /home/martinezamezaga.p/
+[martinezamezaga.p@explorer-02 ~]$ ls
+github  ondemand  Temp3
+[martinezamezaga.p@explorer-02 ~]$ # moved the directory temp3 from bioinformatics portfolio to home directory
+[martinezamezaga.p@explorer-02 ~]$ # task 9 complete
+[martinezamezaga.p@explorer-02 ~]$ ls /courses/
+ALY4020.202710   BINF6610.202710  CHEM3404.202710  CS6120.202710    discovery-courses  IE7615.202710    ReadMe.md
+ALY6980.202710   BIOL2406.202710  CHEM3432.202710  CS6180.202710    DS5500.202710      IE7945.202710    src
+archive          BIOL6216.202710  CHEM5641         CS7150.202710    ENSY5800.202710    INFO7374.202710  TO_BE_ARCHIVED
+BINF6250.202710  BIOT7001.202710  CHEM5641.202710  CS7170.202710    etc                INFO7375.202710
+BINF6310.202710  BTC4200.202710   CHME5137.202710  CS7980.202710    etc-explorer       INSH6406.202710
+BINF6400.202710  CHEM2162.202710  CS5130.202710    CSYE7105.202710  explorer-courses   NETS7052.202710
+BINF6430.202710  CHEM3402.202710  CS5330.202710    CY4100.202710    HINF5500.202710    PHSC5905.202710
+[martinezamezaga.p@explorer-02 ~]$ ls courses
+ls: cannot access 'courses': No such file or directory
+[martinezamezaga.p@explorer-02 ~]$ # task 10 complete utilized courses instead of Desktop
+[martinezamezaga.p@explorer-02 ~]$ # this shows that you need the / sign to show its a directory
+[martinezamezaga.p@explorer-02 ~]$ rm Temp3/
+rm: cannot remove 'Temp3/': Is a directory
+[martinezamezaga.p@explorer-02 ~]$ rm -r Temp3/
+[martinezamezaga.p@explorer-02 ~]$ ^C /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_
+HPC/1_UNIX/Temp3 /home/martinezamezaga.
+[martinezamezaga.p@explorer-02 ~]$ # removed Temp 3
+[martinezamezaga.p@explorer-02 ~]$ # task 11 complete
+[martinezamezaga.p@explorer-02 ~]$ mkdir Temp3
+[martinezamezaga.p@explorer-02 ~]$ cd Temp3/
+[martinezamezaga.p@explorer-02 Temp3]$ cp -R Storage Storage2
+cp: cannot stat 'Storage': No such file or directory
+[martinezamezaga.p@explorer-02 Temp3]$ cp -R Storage Temp3
+cp: cannot stat 'Storage': No such file or directory
+[martinezamezaga.p@explorer-02 Temp3]$ cd ..
+[martinezamezaga.p@explorer-02 ~]$ rm -i Temp3/
+rm: cannot remove 'Temp3/': Is a directory
+[martinezamezaga.p@explorer-02 ~]$ ls
+github  ondemand  Temp3
+[martinezamezaga.p@explorer-02 ~]$ rm -r Temp3/
+[martinezamezaga.p@explorer-02 ~]$ # only lowercase r means
+[martinezamezaga.p@explorer-02 ~]$ # but it is clear you use that to delete directories as a whole
+[martinezamezaga.p@explorer-02 ~]$ # task 12 complete
+[martinezamezaga.p@explorer-02 ~]$ ls
+github  ondemand
+[martinezamezaga.p@explorer-02 ~]$ cd /courses/
+[martinezamezaga.p@explorer-02 courses]$ cd BIOL2406.202710/
+[martinezamezaga.p@explorer-02 BIOL2406.202710]$ cd students/
+[martinezamezaga.p@explorer-02 students]$ cd martinezamezaga.p/
+[martinezamezaga.p@explorer-02 martinezamezaga.p]$ cd bioinformatics-portfolio/
+[martinezamezaga.p@explorer-02 bioinformatics-portfolio]$ cd UNIX_HPC/
+[martinezamezaga.p@explorer-02 UNIX_HPC]$ cd 1_UNIX/
+[martinezamezaga.p@explorer-02 1_UNIX]$ wget https://github.com/jamiehenzy/01_UNIX_HPC/raw/refs/heads/main/At_proteins.fasta
+--2026-09-28 22:27:38--  https://github.com/jamiehenzy/01_UNIX_HPC/raw/refs/heads/main/At_proteins.fasta
+Connecting to 10.99.0.130:3128... connected.
+Proxy request sent, awaiting response... 302 Found
+Location: https://raw.githubusercontent.com/jamiehenzy/01_UNIX_HPC/refs/heads/main/At_proteins.fasta [following]
+--2026-09-28 22:27:39--  https://raw.githubusercontent.com/jamiehenzy/01_UNIX_HPC/refs/heads/main/At_proteins.fasta
+Connecting to 10.99.0.130:3128... connected.
+Proxy request sent, awaiting response... 200 OK
+Length: 17891640 (17M) [text/plain]
+Saving to: ‘At_proteins.fasta’
+
+At_proteins.fasta             100%[=================================================>]  17.06M  92.5MB/s    in 0.2s
+
+2026-09-28 22:27:40 (92.5 MB/s) - ‘At_proteins.fasta’ saved [17891640/17891640]
+
+[martinezamezaga.p@explorer-02 1_UNIX]$ ls
+At_proteins.fasta  Temp1
+[martinezamezaga.p@explorer-02 1_UNIX]$ wget https://github.com/jamiehenzy/01_UNIX_HPC/raw/refs/heads/main/At_genes.gff.gz
+--2026-09-28 22:28:23--  https://github.com/jamiehenzy/01_UNIX_HPC/raw/refs/heads/main/At_genes.gff.gz
+Connecting to 10.99.0.130:3128... connected.
+Proxy request sent, awaiting response... 302 Found
+Location: https://raw.githubusercontent.com/jamiehenzy/01_UNIX_HPC/refs/heads/main/At_genes.gff.gz [following]
+--2026-09-28 22:28:24--  https://raw.githubusercontent.com/jamiehenzy/01_UNIX_HPC/refs/heads/main/At_genes.gff.gz
+Connecting to 10.99.0.130:3128... connected.
+Proxy request sent, awaiting response... 200 OK
+Length: 4603058 (4.4M) [application/octet-stream]
+Saving to: ‘At_genes.gff.gz’
+
+At_genes.gff.gz               100%[=================================================>]   4.39M  --.-KB/s    in 0.1s
+
+2026-09-28 22:28:24 (36.3 MB/s) - ‘At_genes.gff.gz’ saved [4603058/4603058]
+
+[martinezamezaga.p@explorer-02 1_UNIX]$ gunzip At_genes.gff.gz
+[martinezamezaga.p@explorer-02 1_UNIX]$ ls
+At_genes.gff  At_proteins.fasta  Temp1
+[martinezamezaga.p@explorer-02 1_UNIX]$ pwd
+/courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX
+[martinezamezaga.p@explorer-02 1_UNIX]$ cd ..
+[martinezamezaga.p@explorer-02 UNIX_HPC]$ cd 1_UNIX/
+[martinezamezaga.p@explorer-02 1_UNIX]$ mkdir data
+[martinezamezaga.p@explorer-02 1_UNIX]$ cd data/
+[martinezamezaga.p@explorer-02 data]$ pwd
+/courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX/data
+[martinezamezaga.p@explorer-02 data]$ mv /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX/At_proteins.fasta /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX/data/
+[martinezamezaga.p@explorer-02 data]$ ls
+At_proteins.fasta
+[martinezamezaga.p@explorer-02 data]$ # made a new data directory and moved the fasta file to it
+[martinezamezaga.p@explorer-02 data]$ # task 13 complete
+[martinezamezaga.p@explorer-02 data]$ alias rm='rm -i'
+[martinezamezaga.p@explorer-02 data]$ alias
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias rm='rm -i'
+alias xzegrep='xzegrep --color=auto'
+alias xzfgrep='xzfgrep --color=auto'
+alias xzgrep='xzgrep --color=auto'
+alias zegrep='zegrep --color=auto'
+alias zfgrep='zfgrep --color=auto'
+alias zgrep='zgrep --color=auto'
+[martinezamezaga.p@explorer-02 data]$ alias rm='rm -i'
+[martinezamezaga.p@explorer-02 data]$ # i opened a new terminal and saw that it is just normal
+[martinezamezaga.p@explorer-02 data]$ # i am assuming since we didnt set the alias that is why
+[martinezamezaga.p@explorer-02 data]$ # and its a new powershell session so it doesnt carry over
+[martinezamezaga.p@explorer-02 data]$ # task 14 done
+[martinezamezaga.p@explorer-02 data]$ pwd
+/courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX/data
+[martinezamezaga.p@explorer-02 data]$ cd ..
+[martinezamezaga.p@explorer-02 1_UNIX]$ nano profile
+[martinezamezaga.p@explorer-02 1_UNIX]$ less profile
+[martinezamezaga.p@explorer-02 1_UNIX]$ cd /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX/data
+[martinezamezaga.p@explorer-02 data]$ alias
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias rm='rm -i'
+alias xzegrep='xzegrep --color=auto'
+alias xzfgrep='xzfgrep --color=auto'
+alias xzgrep='xzgrep --color=auto'
+alias zegrep='zegrep --color=auto'
+alias zfgrep='zfgrep --color=auto'
+alias zgrep='zgrep --color=auto'
+[martinezamezaga.p@explorer-02 data]$ source cd /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX/profle.txt
+-bash: cd: /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX/profle.txt: No such file or directory
+[martinezamezaga.p@explorer-02 data]$ source cd /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX/profle
+-bash: cd: /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX/profle: No suchfile or directory
+[martinezamezaga.p@explorer-02 data]$ cd ..
+[martinezamezaga.p@explorer-02 1_UNIX]$ ls
+At_genes.gff  data  profile  Temp1
+[martinezamezaga.p@explorer-02 1_UNIX]$ pwd
+/courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX
+[martinezamezaga.p@explorer-02 1_UNIX]$ cd data/
+[martinezamezaga.p@explorer-02 data]$ source profile
+-bash: profile: No such file or directory
+[martinezamezaga.p@explorer-02 data]$ source /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/1_UNIX/profile
+[martinezamezaga.p@explorer-02 data]$ alias
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls -p'
+alias rm='rm -i'
+alias xzegrep='xzegrep --color=auto'
+alias xzfgrep='xzfgrep --color=auto'
+alias xzgrep='xzgrep --color=auto'
+alias zegrep='zegrep --color=auto'
+alias zfgrep='zfgrep --color=auto'
+alias zgrep='zgrep --color=auto'
+[martinezamezaga.p@explorer-02 data]$ # the output does look different
+[martinezamezaga.p@explorer-02 data]$ touch hi
+[martinezamezaga.p@explorer-02 data]$ rm hi
+rm: remove regular empty file 'hi'?
+[martinezamezaga.p@explorer-02 data]$ # yes alias are working
+[martinezamezaga.p@explorer-02 data]$ cd ..
+[martinezamezaga.p@explorer-02 1_UNIX]$ # task 16 complete
+[martinezamezaga.p@explorer-02 1_UNIX]$ cd ~
+[martinezamezaga.p@explorer-02 ~]$ ls -a
+./   .bash_history  .bash_profile  .emacs      github/  .lesshst   .ssh/
+../  .bash_logout   .bashrc        .gitconfig  .kshrc   ondemand/  .wget-hsts
+[martinezamezaga.p@explorer-02 ~]$ less .bash
+.bash_history  .bash_logout   .bash_profile  .bashrc
+[martinezamezaga.p@explorer-02 ~]$ less .bash
+.bash_history  .bash_logout   .bash_profile  .bashrc
+[martinezamezaga.p@explorer-02 ~]$ less .bash_
+.bash_history  .bash_logout   .bash_profile
+[martinezamezaga.p@explorer-02 ~]$ less .bash_profile
+[martinezamezaga.p@explorer-02 ~]$ # did what task 17 asked
+[martinezamezaga.p@explorer-02 ~]$ # I am going to save this and consider it part 1 of the unit, it is asking me to make a new terminal session
+[martinezamezaga.p@explorer-02 ~]$
