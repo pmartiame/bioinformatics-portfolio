@@ -16,5 +16,6 @@ introductory bioinformatics course, including:
 - Phylogenetic analysis
 
 ## Repository Organization
+# For UNIX_HPC WORK, Each individual part has a final submissions folder with all the related txt files
 # bioinformatics-portfolio
 Bioinformatics coursework portfolio — Paulo-Martinez-Amezaga
