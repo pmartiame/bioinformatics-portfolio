@@ -1,0 +1,139 @@
+[martinezamezaga.p@explorer-01 2_UNIX]$ # Task 9 completed
+[martinezamezaga.p@explorer-01 2_UNIX]$ ls
+At_genes.gff  At_genes_last500.gff  At_proteins.fasta  chr1.fasta  excel_data.csv  intron_IME_data.fasta  smallcase_chr1.fasta
+[martinezamezaga.p@explorer-01 2_UNIX]$ # all files in the correct place task 1 complete
+
+
+[martinezamezaga.p@explorer-01 2_UNIX]$grep "ACGT" chr1.fasta
+[martinezamezaga.p@explorer-01 2_UNIX]$grep "AC.GT" chr1.fasta
+[martinezamezaga.p@explorer-01 2_UNIX]$grep "AC*GT" chr1.fasta
+grep "AC.*GT" chr1.fasta
+[martinezamezaga.p@explorer-01 2_UNIX]$
+
+"GAGCTGCTATAAGAACTTATTTGTTGGAAAGATCACGTGTTTGCCAGGTGTCCGATCCCGAAAGAAACTATCATTGTTT
+CTACATGCTTTGTGCTGCACCAGAAGAAGTAAGTTTTAGATCAAAATTAACTTTTAAAATGACCAGTGAAGTAGCTGCT
+GATTCTCAGCGTACTAAAATGTATACTTATTTCTACTTTCAGGATGCTAAGAAGTTTAAGCTTGGTGATCCTAAGATAT" shortened because it was extremely long
+[martinezamezaga.p@explorer-01 2_UNIX]$ grep -c "ACGT" chr1.fasta
+grep -c "AC.GT" chr1.fasta
+grep -c "AC*GT" chr1.fasta
+grep -c "AC.*GT" chr1.fasta
+50612
+62327
+288454
+342195
+[martinezamezaga.p@explorer-01 2_UNIX]$
+[martinezamezaga.p@explorer-01 2_UNIX]$ # "ac.*gt" should have most matches which it does because . matches to anything and *allows zero or more
+
+^C
+[martinezamezaga.p@explorer-01 2_UNIX]$ # task 2 complete
+[martinezamezaga.p@explorer-01 2_UNIX]$ # reminder to trim down the text
+[martinezamezaga.p@explorer-01 2_UNIX]$ ls
+At_genes.gff.gz  At_proteins.fasta  chr1.fasta  excel_data.csv  intron_IME_data.fasta
+[martinezamezaga.p@explorer-01 2_UNIX]$ grep -c "ACGT" *.fasta
+grep -c "AC.GT" *.fasta
+grep -c "AC*GT" *.fasta
+At_proteins.fasta:70
+chr1.fasta:50612
+intron_IME_data.fasta:11924
+At_proteins.fasta:47
+chr1.fasta:62327
+intron_IME_data.fasta:17998
+At_proteins.fasta:2600
+chr1.fasta:288454
+intron_IME_data.fasta:103917
+[martinezamezaga.p@explorer-01 2_UNIX]$ #task 3 completed
+[martinezamezaga.p@explorer-01 2_UNIX]$ less chr1.fasta
+
+[1]+  Stopped                 less chr1.fasta
+
+[1]+  Stopped                 less chr1.fasta
+[martinezamezaga.p@explorer-01 2_UNIX]$ # did less and closed it
+[martinezamezaga.p@explorer-01 2_UNIX]$ # task 4 completed
+[martinezamezaga.p@explorer-01 2_UNIX]$ tr 'A-Z' 'a-z' < chr1.fasta > smallcase_chr1.fasta
+[martinezamezaga.p@explorer-01 2_UNIX]$ head -n 2 smallcase_chr1.fasta
+>chr1 dumped from adb: mar/14/08 12:28; last updated: 2007-12-20
+ccctaaaccctaaaccctaaaccctaaacctctgaatccttaatccctaaatccctaaatctttaaatcctacatccat
+[martinezamezaga.p@explorer-01 2_UNIX]$ ls
+At_genes.gff.gz  At_proteins.fasta  chr1.fasta  excel_data.csv  intron_IME_data.fasta  smallcase_chr1.fasta
+[martinezamezaga.p@explorer-01 2_UNIX]$ #task 5 complete
+[martinezamezaga.p@explorer-01 2_UNIX]$ ls | sed 's/smallcase_chr1.fasta/chr1_smallcase.fasta/'
+At_genes.gff.gz
+At_proteins.fasta
+chr1.fasta
+excel_data.csv
+intron_IME_data.fasta
+chr1_smallcase.fasta
+[martinezamezaga.p@explorer-01 2_UNIX]$ # used sed to change name of chr1_smallcase
+[martinezamezaga.p@explorer-01 2_UNIX]$ # task 6 completed
+[martinezamezaga.p@explorer-01 2_UNIX]$ tail -n 500 At_genes.gff > At_genes_last500.gff
+tail: cannot open 'At_genes.gff' for reading: No such file or directory
+[martinezamezaga.p@explorer-01 2_UNIX]$ gunzip At_genes.gff.gz
+[martinezamezaga.p@explorer-01 2_UNIX]$ # had to unzip the file
+[martinezamezaga.p@explorer-01 2_UNIX]$ tail -n 500 At_genes.gff > At_genes_last500.gff
+[martinezamezaga.p@explorer-01 2_UNIX]$ ls -l At_genes_last500.gff
+-rw-r--r-- 1 martinezamezaga.p BIOL2406.202710-staff 40753 Sep 28 23:48 At_genes_last500.gff
+[martinezamezaga.p@explorer-01 2_UNIX]$ wc -l At_genes_last500.gff
+500 At_genes_last500.gff
+[martinezamezaga.p@explorer-01 2_UNIX]$ cat At_
+At_genes.gff          At_genes_last500.gff  At_proteins.fasta
+[martinezamezaga.p@explorer-01 2_UNIX]$ cat At_genes_last500.gff
+
+
+
+
+# trimmed
+ChrM    TAIR8   protein 127475  127843  .       -       .       ID=ATMG00470.1-Protein;Name=ATMG00470.1;Derives_from=ATMG00470.1
+ChrM    TAIR8   CDS     127475  127843  .       -       0       Parent=ATMG00470.1,ATMG00470.1-Protein;
+ChrM    TAIR8   exon    127475  127843  .       -       .       Parent=ATMG00470.1
+ChrM    TAIR8   gene    129909  130385  .       +       .       ID=ATMG00480;Note=protein_coding_gene;Name=ATMG00480
+ChrM    TAIR8   mRNA    129909  130385  .       +       .       ID=ATMG00480.1;Parent=ATMG00480;Name=ATMG00480.1;Index=1
+ChrM    TAIR8   protein 129909  130385  .       +       .       ID=ATMG00480.1-Protein;Name=ATMG00480.1;Derives_from=ATMG00480.1
+ChrM    TAIR8   exon    129909  130385  .       +       .       Parent=ATMG00480.1
+ChrM    TAIR8   CDS     129909  130385  .       +       0       Parent=ATMG00480.1,ATMG00480.1-Protein;
+ChrM    TAIR8   gene    130817  131140  .       +       .       ID=ATMG00490;Note=protein_coding_gene;Name=ATMG00490
+ChrM    TAIR8   mRNA    130817  131140  .       +       .       ID=ATMG00490.1;Parent=ATMG00490;Name=ATMG00490.1;Index=1
+ChrM    TAIR8   protein 130817  131140  .       +       . 
+
+
+
+
+# trimmed for simplicitys sake      
+[martinezamezaga.p@explorer-01 2_UNIX]$ # task 7 completed
+[martinezamezaga.p@explorer-01 2_UNIX]$ cut -f 1,2 At_genes.gff | head
+Chr1    TAIR8
+Chr1    TAIR8
+Chr1    TAIR8
+Chr1    TAIR8
+Chr1    TAIR8
+Chr1    TAIR8
+Chr1    TAIR8
+Chr1    TAIR8
+Chr1    TAIR8
+Chr1    TAIR8
+[martinezamezaga.p@explorer-01 2_UNIX]$ cut -f 1,2 At_genes.gff | head | wc -l
+10
+[martinezamezaga.p@explorer-01 2_UNIX]$ cat At_
+At_genes.gff          At_genes_last500.gff  At_proteins.fasta
+[martinezamezaga.p@explorer-01 2_UNIX]$ #verified output and that is task 8
+[martinezamezaga.p@explorer-01 2_UNIX]$ cut -f 1,2 At_genes.gff | head -n 10
+Chr1    TAIR8
+Chr1    TAIR8
+Chr1    TAIR8
+Chr1    TAIR8
+Chr1    TAIR8
+Chr1    TAIR8
+Chr1    TAIR8
+Chr1    TAIR8
+Chr1    TAIR8
+Chr1    TAIR8
+[martinezamezaga.p@explorer-01 2_UNIX]$ # displayed them a second time to make sure
+[martinezamezaga.p@explorer-01 2_UNIX]$ # i am going to answer task 9
+[martinezamezaga.p@explorer-01 2_UNIX]$ #first the command replaces new lines with @ so each fasta record can then be processed as one line
+[martinezamezaga.p@explorer-01 2_UNIX]$ # then it marks the beginning with #
+[martinezamezaga.p@explorer-01 2_UNIX]$ # it converts those markers to new lines
+[martinezamezaga.p@explorer-01 2_UNIX]$ #then it used the grep to select the first introns in the 5' UTR
+[martinezamezaga.p@explorer-01 2_UNIX]$ # the sort then order them by their distance from TSS
+[martinezamezaga.p@explorer-01 2_UNIX]$ # head sorts closest 5 sequences
+[martinezamezaga.p@explorer-01 2_UNIX]$ #tr restores the fasts line breaks
+[martinezamezaga.p@explorer-01 2_UNIX]$ # Task 9 completed
+[martinezamezaga.p@explorer-01 2_UNIX]$
