@@ -1,0 +1,258 @@
+
+[martinezamezaga.p@explorer-02 3_UNIX]$ pwd
+/courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/3_UNIX
+[martinezamezaga.p@explorer-02 3_UNIX]$ cd ~
+[martinezamezaga.p@explorer-02 ~]$ cat /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/3_UNIX/untrimmed_fastq/SRR097977.fastq
+
+
+# shortened for simplicity
+CCCCCCCCCCCCCCCC>AC.CCCC.CC7A<>AA>A1
+CCCCCC?CCCCC.C5.5<C1CCC?<C??&?A?&&?A
+@SRR097977.248 209DTAAXX_Lenski2_1_7:8:3:410:77 length=36
+TTCGACGTTTGGTGGGACTAAGAAAGCATACGGGCG
++SRR097977.248 209DTAAXX_Lenski2_1_7:8:3:410:77 length=36
+CCA?AA?AAA<3A<&:7AA8A::?A*A=>8<*)8<-
+@SRR097977.249 209DTAAXX_Lenski2_1_7:8:3:441:292 length=36
+GGGTAGGTATTACTCAGGACGAGGCGGTCGTGCCAC
++SRR097977.249 209DTAAXX_Lenski2_1_7:8:3:441:292 length=36
+C:CCC::CCCCCCCC<8?6A:C28C<608'&&&,'$
+[martinezamezaga.p@explorer-02 ~]$ # C:CCC::CCCCCCCC<8?6A:C28C<608'&&&,'$ is in fact the last line
+
+[martinezamezaga.p@explorer-02 ~]$ cat /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/3_UNIX/untrimmed_fastq/
+
+
+# Shortened for simplicity's sake 
+TATTCTGCCATAATGAAATTCGCCACTTGTTAGTGT
++SRR097977.1 209DTAAXX_Lenski2_1_7:8:3:710:178 length=36
+CCCCCCCCCCCCCCC>CCCCC7CCCCCCACA?5A5<
+@SRR097977.2 209DTAAXX_Lenski2_1_7:8:3:365:371 length=36
+GGTTACTCTTTTAACCTTGATGTTTCGACGCTGTAT
++SRR097977.2 209DTAAXX_Lenski2_1_7:8:3:365:371 length=36
+CC:?:CC:?CCCCC??C?:?C-&:C:,?<&*?+7?<
+@SRR097977.3 209DTAAXX_Lenski2_1_7:8:3:663:569 length=36
+TTGTTCGCTTTTGGTAATTAATCCCGGAAATAATAA
+
+@SRR098026.247 HWUSI-EAS1599_1:2:1:2:1311 length=35
+TNAANAAAAAAAAAAAAAAAAANNNNNNNAAAATA
++SRR098026.247 HWUSI-EAS1599_1:2:1:2:1311 length=35
+#!##!#################!!!!!!!######
+@SRR098026.248 HWUSI-EAS1599_1:2:1:2:118 length=35
+GNTGNGGTCATCATACGCGCCCNNNNNNNGGCATG
++SRR098026.248 HWUSI-EAS1599_1:2:1:2:118 length=35
+B!;?!A=5922:##########!!!!!!!######
+@SRR098026.249 HWUSI-EAS1599_1:2:1:2:1057 length=35
+CNCTNTATGCGTACGGCAGTGANNNNNNNGGAGAT
++SRR098026.249 HWUSI-EAS1599_1:2:1:2:1057 length=35
+A!@B!BBB@ABAB#########!!!!!!!######
+
+
+
+
+
+
+
+[martinezamezaga.p@explorer-02 ~]$ # printed the contents of all the files in the directory from the home and not changing directory
+[martinezamezaga.p@explorer-02 ~]$ # excercise 2 complete
+[martinezamezaga.p@explorer-02 ~]$ less untrimmed_fastq/SRR097977.fastq
+untrimmed_fastq/SRR097977.fastq: No such file or directory
+[martinezamezaga.p@explorer-02 ~]$ cd /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/
+[martinezamezaga.p@explorer-02 UNIX_HPC]$ ls
+1_UNIX  2_UNIX  3_UNIX
+[martinezamezaga.p@explorer-02 UNIX_HPC]$ cd 3_UNIX/
+[martinezamezaga.p@explorer-02 3_UNIX]$ cd
+[martinezamezaga.p@explorer-02 ~]$ ls
+github  ondemand
+[martinezamezaga.p@explorer-02 ~]$ cd /courses/BIOL2406.202710/students/martinezamezaga.p/bioinformatics-portfolio/UNIX_HPC/
+[martinezamezaga.p@explorer-02 UNIX_HPC]$ ls
+1_UNIX  2_UNIX  3_UNIX
+[martinezamezaga.p@explorer-02 UNIX_HPC]$ cd 3_UNIX/
+[martinezamezaga.p@explorer-02 3_UNIX]$ ls
+untrimmed_fastq
+
+
+
+[martinezamezaga.p@explorer-02 3_UNIX]$ less untrimmed_fastq/SRR097977.fastq
+[martinezamezaga.p@explorer-02 3_UNIX]$ less untrimmed_fastq/SRR097977.fastq
+[martinezamezaga.p@explorer-02 3_UNIX]$ [martinezamezaga.p@explorer-02 3_UNIX]$ #CAC
+[martinezamezaga.p@explorer-02 3_UNIX]$ # It is TTTTT highlighted then CAC next to it
+
+# this is task 3 
+
+
+
+[martinezamezaga.p@explorer-02 3_UNIX]$ cd untrimmed_fastq
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ rm -r backup
+rm: cannot remove 'backup': No such file or directory
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ cp SRR098026.fastq SRR098026-backup.fastq
+cp SRR097977.fastq SRR097977-backup.fastq
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ mkdir backup
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ mv *-backup.fastq backup
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ chmod -w backup/*-backup.fastq
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ ls -l backup
+total 89
+-r-xr-xr-x 1 martinezamezaga.p BIOL2406.202710-staff 47552 Sep 29 01:02 SRR097977-backup.fastq
+-r-xr-xr-x 1 martinezamezaga.p BIOL2406.202710-staff 43332 Sep 29 01:02 SRR098026-backup.fastq
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ # made the backups like the tutorial
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ # 
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ # is task 4
+
+
+
+
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ grep -B1 GNATNACCACTTCC SRR098026.fastq
+@SRR098026.245 HWUSI-EAS1599_1:2:1:2:801 length=35
+GNATNACCACTTCCAGTGCTGANNNNNNNGGGATG
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ grep -B1 AAGTT *.fastq
+SRR097977.fastq-@SRR097977.11 209DTAAXX_Lenski2_1_7:8:3:247:351 length=36
+SRR097977.fastq:GATTGCTTTAATGAAAAAGTCATATAAGTTGCCATG
+--
+SRR097977.fastq-@SRR097977.67 209DTAAXX_Lenski2_1_7:8:3:544:566 length=36
+SRR097977.fastq:TTGTCCACGCTTTTCTATGTAAAGTTTATTTGCTTT
+--
+SRR097977.fastq-@SRR097977.68 209DTAAXX_Lenski2_1_7:8:3:724:110 length=36
+SRR097977.fastq:TGAAGCCTGCTTTTTTATACTAAGTTTGCATTATAA
+--
+SRR097977.fastq-@SRR097977.80 209DTAAXX_Lenski2_1_7:8:3:258:281 length=36
+SRR097977.fastq:GTGGCGCTGCTGCATAAGTTGGGTTATCAGGTCGTT
+--
+SRR097977.fastq-@SRR097977.92 209DTAAXX_Lenski2_1_7:8:3:353:318 length=36
+SRR097977.fastq:GGCAAAATGGTCCTCCAGCCAGGCCAGAAGCAAGTT
+--
+SRR097977.fastq-@SRR097977.139 209DTAAXX_Lenski2_1_7:8:3:703:655 length=36
+SRR097977.fastq:TTTATTTGTAAAGTTTTGTTGAAATAAGGGTTGTAA
+--
+SRR097977.fastq-@SRR097977.238 209DTAAXX_Lenski2_1_7:8:3:592:919 length=36
+SRR097977.fastq:TTCTTACCATCCTGAAGTTTTTTCATCTTCCCTGAT
+--
+SRR098026.fastq-@SRR098026.158 HWUSI-EAS1599_1:2:1:1:1505 length=35
+SRR098026.fastq:GNNNNNNNNCAAAGTTGATCNNNNNNNNNTGTGCG
+
+
+
+
+
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ # that was exercise 5
+
+
+
+
+
+
+
+
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ ^C
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ wc -l SRR098026.fastq
+996 SRR098026.fastq
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ echo $(($(wc -l < SRR098026.fastq) / 4))
+249
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ # its like algebra with echo
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ # that is excercise 6
+
+
+
+
+
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ cd ..
+
+
+
+
+
+
+
+
+
+
+[martinezamezaga.p@explorer-02 3_UNIX]$ for filename in *.txt
+do
+    name=$(basename ${filename} .txt)
+    echo ${name}
+done
+untrimmed_fastq
+[martinezamezaga.p@explorer-02 3_UNIX]$ for filename in *_2021.txt
+do
+    name=$(basename ${filename} _2021.txt)
+    mv ${filename} ${name}.txt
+done
+mv: cannot stat '*_2021.txt': No such file or directory
+[martinezamezaga.p@explorer-02 3_UNIX]$ nano hello.txt
+[martinezamezaga.p@explorer-02 3_UNIX]$ $ for filename in *.txtorer-02 3_UNIX]$ $ for filename in *.txt
+> do
+> name=$(basename ${filename} .txt)
+> echo ${name}
+> done
+-bash: $: command not found
+-bash: do: command not found
+[martinezamezaga.p@explorer-02 3_UNIX]$ for filename in *_2021.txt
+do
+    name=$(basename ${filename} _2021.txt)
+    mv ${filename} ${name}.txt
+done
+mv: cannot stat '*_2021.txt': No such file or directory
+[martinezamezaga.p@explorer-02 3_UNIX]$ for filename in *.txt
+do
+    name=$(basename ${filename} .txt)
+    echo ${name}
+done
+hello
+
+
+
+
+# printed the prefix for the file which was hello.txt 
+# this is task 7 complete
+
+
+[martinezamezaga.p@explorer-02 3_UNIX]$ nano hello_2021.txt
+[martinezamezaga.p@explorer-02 3_UNIX]$ ls
+ do   done   echo   hello_2021.txt   hello.txt  'name=*_2021'   untrimmed_fastq
+[martinezamezaga.p@explorer-02 3_UNIX]$ rm 'name=*_2021'
+[martinezamezaga.p@explorer-02 3_UNIX]$ ls
+do  done  echo  hello_2021.txt  hello.txt  untrimmed_fastq
+[martinezamezaga.p@explorer-02 3_UNIX]$ for filename in *_2021.txt; do     name=$(basename ${filename} _2021.txt);     mv ${filename} ${name}.txt; done
+[martinezamezaga.p@explorer-02 3_UNIX]$ ls
+do  done  echo  hello.txt  untrimmed_fastq
+[martinezamezaga.p@explorer-02 3_UNIX]$ # removed 2021 sucessfuly
+
+# this is task 8 done correctly
+
+
+
+
+[martinezamezaga.p@explorer-02 3_UNIX]$ nano README.txt
+[martinezamezaga.p@explorer-02 3_UNIX]$ ls
+do  done  echo  hello.txt  README.txt  untrimmed_fastq
+[martinezamezaga.p@explorer-02 3_UNIX]$ cat README.txt
+9/28/2026
+
+# this is task 9 done correctly 
+
+
+
+
+
+[martinezamezaga.p@explorer-02 3_UNIX]$ # excercise 9 complete
+[martinezamezaga.p@explorer-02 3_UNIX]$ nano bad-reads-script.sh
+[martinezamezaga.p@explorer-02 3_UNIX]$ chmod +x bad-reads-script.sh
+[martinezamezaga.p@explorer-02 3_UNIX]$ ls -l bad-reads-script.sh
+-rwxr-xr-x 1 martinezamezaga.p BIOL2406.202710-staff 100 Sep 29 01:12 bad-reads-script.sh
+[martinezamezaga.p@explorer-02 3_UNIX]$ ./bad-reads-script.sh
+grep: *.fastq: No such file or directory
+Script finished!
+[martinezamezaga.p@explorer-02 3_UNIX]$ ./bad-reads-script.sh
+grep: *.fastq: No such file or directory
+Script finished!
+[martinezamezaga.p@explorer-02 3_UNIX]$ ls
+bad-reads-script.sh  do  done  echo  hello.txt  README.txt  scripted_bad_reads.txt  untrimmed_fastq
+[martinezamezaga.p@explorer-02 3_UNIX]$ mv bad-reads-script.sh untrimmed_fastq/
+[martinezamezaga.p@explorer-02 3_UNIX]$ ls
+do  done  echo  hello.txt  README.txt  scripted_bad_reads.txt  untrimmed_fastq
+[martinezamezaga.p@explorer-02 3_UNIX]$ cd untrimmed_fastq/
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ ls
+backup  bad-reads-script.sh  SRR097977.fastq  SRR098026.fastq
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ ./bad-reads-script.sh
+Script finished!
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ # it ran
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ #succesfuly
+[martinezamezaga.p@explorer-02 untrimmed_fastq]$ #excercise 10 completed
+
